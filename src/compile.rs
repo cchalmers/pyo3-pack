@@ -201,6 +201,8 @@ pub fn compile(
         .iter()
         .fold("cargo".to_string(), |acc, x| acc + " " + x);
 
+    println!("the build args are {:?}\n", build_args);
+
     let mut let_binding = Command::new("cargo");
     let build_command = let_binding
         .args(&build_args)
